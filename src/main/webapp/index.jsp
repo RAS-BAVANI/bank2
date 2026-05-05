@@ -1,5 +1,5 @@
 <%@ page import="java.lang.*"%>
-<!DOCTYPE>
+<!DOCTYPE html>
 <html lang="en">
 <head><title>Bank App</title></head>
 
@@ -16,27 +16,30 @@ Enter amount:<input type="text" name="amt">
 
 </form>
 
-<hr>
+
 
 <%
-App bank=(App) Application.getAttribute("bank");
+App bank=(App) session.getAttribute("bank");
 if(bank==null){
 bank=new App();
-Application.setAttribute("bank",bank);
+session.setAttribute("bank",bank);
 }
 
 
 if(request.getParameter("amt")!=null){
 int amount=Integer.parseInt(request.getParameter("amt"));
 String res="";
+int balance=0;
 String op=request.getParameter("op");
 if(op.equals("deposit"){
-res=bank.deposit(amount);
+balance=bank.deposit(amount);
 }
 else{
-res=bank.withdraw(amount);
+balance=bank.withdraw(amount);
 }
 }
+
+res=String.valueOf(balance);
 %>
 
 <h3>Balance:<%=res%></h3>
