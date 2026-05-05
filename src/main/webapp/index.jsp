@@ -1,4 +1,4 @@
-<%@ page import="java.lang.*"%>
+<%@ page import="com.bank.bank"%>
 <!DOCTYPE html>
 <html lang="en">
 <head><title>Bank App</title></head>
