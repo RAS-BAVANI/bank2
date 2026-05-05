@@ -25,11 +25,11 @@ bank=new App();
 session.setAttribute("bank",bank);
 }
 
-
-if(request.getParameter("amt")!=null){
-int amount=Integer.parseInt(request.getParameter("amt"));
 String res="";
 int balance=0;
+if(request.getParameter("amt")!=null){
+int amount=Integer.parseInt(request.getParameter("amt"));
+
 String op=request.getParameter("op");
 if(op.equals("deposit")){
 balance=bank.deposit(amount);
