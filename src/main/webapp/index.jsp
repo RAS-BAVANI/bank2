@@ -44,5 +44,15 @@ res=String.valueOf(balance);
 
 <h3>Balance:<%=res%></h3>
 
+<ul>
+<%
+java.util.List<String> history=bank.getHistory();
+for(String h:history){
+%>
+<li><%=h%></li>
+<%
+}
+%>
+
 </body>
 </html>
