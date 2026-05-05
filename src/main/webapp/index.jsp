@@ -1,4 +1,4 @@
-<%@ page import="com.bank.bank"%>
+<%@ page import="com.bank2.bank2"%>
 <!DOCTYPE html>
 <html lang="en">
 <head><title>Bank App</title></head>
