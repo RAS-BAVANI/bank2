@@ -1,9 +1,10 @@
 package com.bank.bank;
-import java.util.ArrayList;
+import java.util.List;
 public class App {
 	int balance=0;
+  List<String> history=new ArrayList<>();
   public int deposit(int amt) {
-	  ArrayList<String> history=new ArrayList<>();
+	  
 	  if(amt <0) {
 		 
 		  throw new IllegalArgumentException("amount not be zero");
