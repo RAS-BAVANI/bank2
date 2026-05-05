@@ -53,6 +53,7 @@ for(String h:history){
 <%
 }
 %>
+</ul>
 
 </body>
 </html>
