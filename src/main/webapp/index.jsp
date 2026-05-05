@@ -31,7 +31,7 @@ int amount=Integer.parseInt(request.getParameter("amt"));
 String res="";
 int balance=0;
 String op=request.getParameter("op");
-if(op.equals("deposit"){
+if(op.equals("deposit")){
 balance=bank.deposit(amount);
 }
 else{
