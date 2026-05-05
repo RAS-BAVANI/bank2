@@ -27,7 +27,8 @@ session.setAttribute("bank",bank);
 
 String res="";
 int balance=0;
-if(request.getParameter("amt")!=null){
+String a=request.getParameter("amt");
+if(a!=null &&  !a.trim().isEmpty()){
 int amount=Integer.parseInt(request.getParameter("amt"));
 
 String op=request.getParameter("op");
